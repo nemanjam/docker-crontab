@@ -1,0 +1,20 @@
+#     LANG=de_DE.UTF-8
+##    LANGUAGE=de
+##    LC_CTYPE=de_DE.UTF-8
+##    PYTHONIOENCODING=utf8
+
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23) !!!! UTC !!!! 2 or 1 hour later than CET-DST or CET
+# │ │ ┌───────────── day of the month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                   7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * * <command to execute>
+30 3 * * * /app/load-mitglied.sh
+05 6 * * 5 python /app/geburtstagsreminder.py
+30 5 * * * /app/birthdaycards.sh
+55 3 * * * /app/dailylog.sh
+15 4 * * 1 /app/snapshot.sh
+30 4 1 * * /app/snapshot.sh

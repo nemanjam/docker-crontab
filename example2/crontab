@@ -1,0 +1,7 @@
+# https://stackoverflow.com/a/47960145
+# https://stackoverflow.com/questions/37458287/how-to-run-a-cron-job-inside-a-docker-container
+
+# * * * * * echo "hello stackoverflow" >> /test_file 2>&1
+* * * * * echo "hello stackoverflow" > /proc/1/fd/1 2> /proc/1/fd/2
+# remember to end this file with an empty new line
+
